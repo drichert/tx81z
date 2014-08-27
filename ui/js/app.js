@@ -1,6 +1,10 @@
 var Alg = Backbone.View.extend({
   el: $("#alg"),
 
+  events: {
+    "click input[type=radio]": "switchAlgImg"
+  },
+
   algSelect: function() {
     var html = "";
 
@@ -12,9 +16,24 @@ var Alg = Backbone.View.extend({
     return html;
   },
 
+  switchAlgImg: function(ev) {
+    var classes = [1, 2, 3, 4, 5, 6, 7, 8].map(function(n) {
+      return "alg" + n;
+    });
+
+    this.$el.find(".refcard").removeClass(classes.join(" "))
+                             .addClass("alg" + ev.target.value);
+  },
+
   render: function() {
-    this.$el.html(this.algSelect());
+    this.$el.find(".picker").html(this.algSelect());
 
     return this;
   }
 });
+
+//var Adsr = Backbone.View.extend({
+//  el: $("#adsr"),
+//
+//
+//});

@@ -3,20 +3,45 @@
 <head>
   <title>TX81Z</title>
 
+  <style type="text/css">
+    .refcard {
+      width:      119px;
+      height:     78px;
+      background: url(./img/refcard.gif) no-repeat -0px 0;
+    }
+
+    .alg1 { background-position: -8px -25px;    }
+    .alg2 { background-position: -127px -25px;  }
+    .alg3 { background-position: -247px -25px;  }
+    .alg4 { background-position: -366px -25px;  }
+    .alg5 { background-position: -8px -104px;   }
+    .alg6 { background-position: -127px -104px; }
+    .alg7 { background-position: -246px -104px; }
+    .alg8 { background-position: -366px -104px; }
+  </style>
+
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/backbone-forms/0.14.0/backbone-forms.min.js"></script> -->
 
 </head>
 
 <body>
-  <h4>Voice</h4>
+  <h4>Algorithm</h4>
+  <div id="alg">
+    <div class="picker"></div>
+    <div class="refcard"></div>
+  </div>
 
-  <div id="alg"></div>
+  <h4>ADSR</h4>
+  <div id="adsr">
+    <div class="sliders"></div>
+  </div>
 
   <script src="./js/app.js"></script>
-  <script>  
+  <script>
     (new Alg).render()
   </script>
 </body>
