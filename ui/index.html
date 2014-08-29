@@ -18,7 +18,17 @@
     .alg6 { background-position: -127px -104px; }
     .alg7 { background-position: -246px -104px; }
     .alg8 { background-position: -366px -104px; }
+
+    #adsr {
+    }
+    #adsr > span { 
+      height: 200px;
+      float: left;
+      margin: 15px;
+    }
   </style>
+
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
@@ -37,12 +47,16 @@
 
   <h4>ADSR</h4>
   <div id="adsr">
-    <div class="sliders"></div>
+    <span class="a">10</span>
+    <span class="d">10</span>
+    <span class="s">10</span>
+    <span class="r">10</span>
   </div>
 
   <script src="./js/app.js"></script>
   <script>
-    (new Alg).render()
+    (new Alg).render();
+    (new Adsr).render();
   </script>
 </body>
 </html>

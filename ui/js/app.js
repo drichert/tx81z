@@ -32,8 +32,19 @@ var Alg = Backbone.View.extend({
   }
 });
 
-//var Adsr = Backbone.View.extend({
-//  el: $("#adsr"),
-//
-//
-//});
+var Adsr = Backbone.View.extend({
+  el: $("#adsr"),
+
+  render: function() {
+    this.$el.find("span").each(function() {
+      $(this).empty().slider({
+        value:       1,
+        range:       "min",
+        orientation: "vertical",
+        animate:     true
+      });
+    });
+
+    return this;
+  }
+});
